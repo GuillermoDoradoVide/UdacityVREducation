@@ -1,24 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class DisplayInfoController_UI : MonoBehaviour {
+public class PlayerVisionFade_UI : MonoBehaviour {
 
     public Transform mainCanvas;
-    public Text displayText;
 
     private CanvasGroup mainCanvasCanvasGroup;
     private bool isUIAnimationTransition;
 
-	private void Awake () {
-        mainCanvas = transform.GetChild(0);
-        displayText = mainCanvas.GetComponentInChildren<Text>();
-        if (displayText == null)
+    private void Awake()
+    {
+        if(mainCanvas == null)
         {
-            Debug.LogWarning("(" + transform.name + ") couldn't find a child text component.");
+            Debug.LogWarning("(" + transform.name + ") VisionFade canvas hasn't beeing asigned.");
             Debug.Break();
         }
+
         mainCanvasCanvasGroup = mainCanvas.GetComponent<CanvasGroup>();
         if (mainCanvasCanvasGroup == null)
         {
@@ -28,10 +26,6 @@ public class DisplayInfoController_UI : MonoBehaviour {
         isUIAnimationTransition = false;
     }
 
-    public void setDisplayInfoText(string newText)
-    {
-        displayText.text = newText;
-    }
     [ContextMenu("ShowUI")]
     public void show()
     {
@@ -44,7 +38,7 @@ public class DisplayInfoController_UI : MonoBehaviour {
         showHideDisplayInfo(0);
     }
 
-    public void showHideDisplayInfo( float action, float speed = 1f)
+    public void showHideDisplayInfo(float action, float speed = 1f)
     {
         isUIAnimationTransition = false;
         StartCoroutine(DisplayInfoVisibility(speed, action));
