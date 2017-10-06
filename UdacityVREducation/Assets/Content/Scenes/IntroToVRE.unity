@@ -506,7 +506,6 @@ GameObject:
   - component: {fileID: 876590730}
   - component: {fileID: 876590728}
   - component: {fileID: 876590727}
-  - component: {fileID: 876590731}
   m_Layer: 0
   m_Name: DisplayInfoMainCanvas
   m_TagString: Untagged
@@ -592,18 +591,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &876590731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 876590725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29b4bc02e035a64c8cd20510e1c8d77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: {fileID: 0}
 --- !u!1001 &1164840124
 Prefab:
   m_ObjectHideFlags: 0
@@ -897,6 +884,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1816626500}
+  - component: {fileID: 1816626501}
   m_Layer: 0
   m_Name: '[UI - DisplayInfo]'
   m_TagString: Untagged
@@ -918,6 +906,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816626501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816626499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29b4bc02e035a64c8cd20510e1c8d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCanvas: {fileID: 876590726}
+  displayText: {fileID: 791303904}
 --- !u!1001 &1945175711
 Prefab:
   m_ObjectHideFlags: 0
