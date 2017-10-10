@@ -14,6 +14,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 /// Draws a circular reticle in front of any object that the user points at.
 /// The circle dilates if the object is clickable.
@@ -44,7 +45,15 @@ public class GvrReticlePointer : GvrBasePointer {
   [Range(-32767, 32767)]
   public int reticleSortingOrder = 32767;
 
-  public Material MaterialComp { private get; set; }
+
+    private float gazeStartTime;
+    //
+    public Image imageFiller;
+    public float timer = 0;
+    public GameObject gazeAt;
+    public GameObject filler;
+
+    public Material MaterialComp { private get; set; }
 
   // Current inner angle of the reticle (in degrees).
   // Exposed for testing.
@@ -68,17 +77,40 @@ public class GvrReticlePointer : GvrBasePointer {
 
   public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
-  }
+        gazeStartTime = Time.time;
+        gazeAt = raycastResultResult.gameObject;
+        filler.transform.position = raycastResultResult.worldPosition;
+        //filler.transform.rotation = Quaternion.FromToRotation(Vector3.forward, raycastResultResult.worldNormal);
+    }
 
   public override void OnPointerHover(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
+        filler.transform.position = raycastResultResult.worldPosition;
+        //filler.transform.rotation = Quaternion.FromToRotation(Vector3.forward, raycastResultResult.worldNormal);
+        if (gazeAt != null && gazeStartTime > 0f)
+        {
+            timer = Time.time - gazeStartTime;
+            imageFiller.fillAmount = timer/2;
+            if (timer > 2.0f /*&& ExecuteEvents.CanHandleEvent<TimedInputHandler>(gazeAt)*/)
+            {
+                imageFiller.fillAmount = 0;
+                timer = 0;
+                gazeStartTime = -1f;
+                BaseEventData data = new BaseEventData(EventSystem.current);
+                ExecuteEvents.Execute(gazeAt, data, ExecuteEvents.submitHandler);
+            }
+        }
+
+
   }
 
   public override void OnPointerExit(GameObject previousObject) {
     ReticleDistanceInMeters = RETICLE_DISTANCE_MAX;
     ReticleInnerAngle = RETICLE_MIN_INNER_ANGLE;
     ReticleOuterAngle = RETICLE_MIN_OUTER_ANGLE;
-  }
+    imageFiller.fillAmount = 0;
+    timer = 0;
+    }
 
   public override void OnPointerClickDown() {}
 
@@ -127,6 +159,8 @@ public class GvrReticlePointer : GvrBasePointer {
 
   protected override void Start() {
     base.Start();
+    gazeStartTime = -1;
+    gazeAt = null;
 
     Renderer rendererComponent = GetComponent<Renderer>();
     rendererComponent.sortingOrder = reticleSortingOrder;

@@ -129,10 +129,10 @@ PlayerSettings:
   xboxOneEnable7thCore: 0
   vrSettings:
     cardboard:
-      depthFormat: 0
+      depthFormat: 2
       enableTransitionView: 0
     daydream:
-      depthFormat: 0
+      depthFormat: 2
       useSustainedPerformanceMode: 0
     hololens:
       depthFormat: 1
@@ -141,10 +141,11 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
+    Android: com.Guillermo.VRED
     Standalone: com.Guillermo.VREducation
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 16
+  AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -240,6 +241,7 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Enabled: 1
     m_Devices:
+    - cardboard
     - daydream
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -506,7 +508,14 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    14: MOBILE_INPUT
+    17: MOBILE_INPUT
+    20: MOBILE_INPUT
+    22: MOBILE_INPUT
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
