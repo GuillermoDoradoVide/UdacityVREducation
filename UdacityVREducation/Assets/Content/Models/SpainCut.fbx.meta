@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: c6118953ddc0f524d8c1c65d3fe82eed
+timeCreated: 1507317726
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: andalucia
+    100002: Andorra
+    100004: aragon
+    100006: Asociacion Platanera Canariense
+    100008: asturias
+    100010: baleares
+    100012: cantabria
+    100014: castillalamancha
+    100016: castillaleon
+    100018: catalonya
+    100020: com val
+    100022: extremadura
+    100024: galicia
+    100026: mandril
+    100028: murcia
+    100030: navarra
+    100032: pais vasco
+    100034: portugal
+    100036: rioja
+    100038: //RootNode
+    400000: andalucia
+    400002: Andorra
+    400004: aragon
+    400006: Asociacion Platanera Canariense
+    400008: asturias
+    400010: baleares
+    400012: cantabria
+    400014: castillalamancha
+    400016: castillaleon
+    400018: catalonya
+    400020: com val
+    400022: extremadura
+    400024: galicia
+    400026: mandril
+    400028: murcia
+    400030: navarra
+    400032: pais vasco
+    400034: portugal
+    400036: rioja
+    400038: //RootNode
+    2300000: andalucia
+    2300002: Andorra
+    2300004: aragon
+    2300006: Asociacion Platanera Canariense
+    2300008: asturias
+    2300010: baleares
+    2300012: cantabria
+    2300014: castillalamancha
+    2300016: castillaleon
+    2300018: catalonya
+    2300020: com val
+    2300022: extremadura
+    2300024: galicia
+    2300026: mandril
+    2300028: murcia
+    2300030: navarra
+    2300032: pais vasco
+    2300034: portugal
+    2300036: rioja
+    3300000: andalucia
+    3300002: Andorra
+    3300004: aragon
+    3300006: Asociacion Platanera Canariense
+    3300008: asturias
+    3300010: baleares
+    3300012: cantabria
+    3300014: castillalamancha
+    3300016: castillaleon
+    3300018: catalonya
+    3300020: com val
+    3300022: extremadura
+    3300024: galicia
+    3300026: mandril
+    3300028: murcia
+    3300030: navarra
+    3300032: pais vasco
+    3300034: portugal
+    3300036: rioja
+    4300000: Asociacion Platanera Canariense
+    4300002: catalonya
+    4300004: baleares
+    4300006: com val
+    4300008: murcia
+    4300010: extremadura
+    4300012: andalucia
+    4300014: galicia
+    4300016: cantabria
+    4300018: asturias
+    4300020: castillaleon
+    4300022: pais vasco
+    4300024: rioja
+    4300026: navarra
+    4300028: aragon
+    4300030: mandril
+    4300032: castillalamancha
+    4300034: portugal
+    4300036: Andorra
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
