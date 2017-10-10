@@ -6,6 +6,8 @@
 !/Assets/
 !/ProjectSettings/
 !.gitignore
+!Unity 2017.1.0f3 Personal (64bit) - IntroToVRE.unity.mp4
+!README.txt
 
 # OS Stuff
 .DS_Store
